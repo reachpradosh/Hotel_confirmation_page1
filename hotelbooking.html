@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .split-container {
+            display: flex; 
+            height: 160vh;
+        }
+        .left-side, .right-side {
+            padding:20px;
+        .top{
+            flex:0.06; 
+            border-bottom:1px solid #00000043;
+        }
+        }
+        .left-side {
+            /* vertical line on the left side */
+            border-right: 1px solid #00000043; 
+            flex: 0.15; padding:10px;
+        }
+        .right-side{
+             padding-top:1px;
+             flex:0.85;
+        }
+    </style>
+</head>
+<body style="background-color:#ffe5b446;" >
+
+    <div class="split-container">
+        <div class="left-side">
+            <div class="top">
+            <img src="logo.svg" width="100" alt="sun" style="padding-bottom:10px; padding-top:5px; "></div>
+            
+
+                <nav> 
+                <a href=""#" style="margin-top:16px; background-color:white; border-radius:5px; padding:8px;" >
+                    <img src="icon-bed.svg" alt="your stay" width="20">Your stay  <span class="notif">1</span></a>
+                <br> <a href="#"><img src="icon-house.svg" alt="the house">The house </a>
+                <br><a href="#"><img src="icon-pin.svg" alt="around town"> Around town</a>
+                <br><a href="#"><img src="icon-breakfast-outline.svg" alt="breakfast"> Breakfast</a>
+                <br><a href="#" style="margin-bottom:500px"><img src="icon-mail.svg" alt="messages">Messages</a>
+                <div class="weather" style=" background-color:#f4d98a; border-radius:20px">
+                    <img class="sun" src="icon-weather.svg">
+                    <div class="label" style="font-family: 'DM Mono', ui-monospace, Menlo, Consolas, monospace;font-size:13px;"> TODAY IN CASSIS </div>
+                    <strong class="temp" style="font-size:40px;"> 27°</strong>
+                    <div class="desc" style="font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;font-size:13px;">Sunny · light breeze</div>
+                </div>
+                <p style="font-family: 'DM Mono', ui-monospace, Menlo, Consolas, monospace; padding-top: 12px; border-top:1px dotted grey; font-size:13px;">
+                    EST. 1987 <br> MAISON SOLEIL · 12 RUE DES 
+                    <br> OLIVIERS · CASSIS<br>© 2026 MAISON SOLEIL</p>
+
+</nav>
+        </div>
+        <div class="right-side">
+            <div class="head">
+                <div>
+                <div class="label">Booking · Confirmed</div>
+                <h1>Bienvenue, <em>Lucia.</em></h1>
+                </div>
+
+            <div class="actions">
+                <button class="btn" type="button">Print receipt</button>
+                <button class="btn dark" type="button">Add to calendar</button>
+            </div>
+            </div>
+            <div class="pages">
+            <section class="receipt">
+                    <div class="torightend">
+                            <span>RECEIPT &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;№ MS-2026</span>
+                            <span></span>
+                    <div style="font-size:30px">Your stay
+                    <br><div class="dates" style="border-top:1px dotted grey;padding-top:20px;
+                    font-size:13px;font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;">
+                            <span>CHECK IN </span>
+                            <span>CHECK OUT</span>
+                    </div>
+                    <div class="dates" style="font-family: 'Fraunces', Georgia, serif;font-size:40px;">
+                            <span>25 Apr</span>
+                            <span> 29 Apr</span>
+                    </div>
+                    <div class="dates" style="border-bottom:1px dashed gray; padding-bottom:10px;
+                    font-size:13px;font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;">
+                            <span>Saturday · 15:00</span>
+                            <span>Wednesday · 11:00</span>
+                    </div>
+                    <div class="payments"style="gap:90px;padding-top:10px;">
+                            <span>Room · La Garrigue x 4 nights</span>
+                            <span>€ 620.00 </span>
+                    </div>
+                    <div class="payments">
+                            <span>Breakfast x 2 guests</span>
+                            <span>€ 96.00 </span>
+                    </div>
+                    <div class="payments" style="border-bottom:1px dashed gray; padding-bottom:10px;">
+                            <span>Tourist tax </span>
+                            <span> € 14.40</span>
+                    </div>
+                    <div class="payments">
+                            <span style="padding-top:20px;padding-bottom:20px;">TOTAL PAID</span>
+                            <span style="padding-top:20px;font-size:15px;font-family: 'Fraunces', Georgia, serif;font-size:40px;">€730.40</span>
+                    </div>
+                    <div class="qr">
+                            <span>PAID · WISE · GBP </span>
+                            <span><img src="icon-barcode.svg"></span>
+                    </div>
+            </section>
+            <section class="welcome" style="color:white;">
+                <p style="border-top: 1px dotted  yellow; padding-top:5px; padding-bottom:20px;">WELCOME CARD</p>
+                <div style="color:yellow;font-style: italic;">A note from your host, </div>
+                <div style="font-style: italic;font-size:40px;padding-bottom:20px;font-family: 'Fraunces', Georgia, serif;font-size:40px;">Margaux. </div>
+                <br>We're so glad you're coming. The shutters will be open, 
+                the lemonade cold, and the cat - Poivre - pretending 
+                not to notice you. 
+                <div style="padding-top:80px;font-size:13px;padding-bottom:10px;">ROOM</div>
+                <div style="font-family: 'Fraunces', Georgia, serif;font-size:30px;">La Garrigue </div>
+            </section>
+            <img src="illustration-sun.svg" width="150" style=padding-left:350px;padding-top:250px;">
+            <div style="margin-top:180px; position:relative; z-index:2;margin-left:360px">
+    <img src="icon-sparkle.svg">
+    HOVER TO FAN
+    <img src="icon-sparkle.svg">
+</div>
+<div class="footers" style="padding-left:10px;">
+    <div style=" background: white;
+    border:1px solid grey;border-radius:10px;box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    <img src="icon-key.svg" style="background-color:#b5401d; border-radius:10px; padding:5px;margin:10px;margin-right:0px; ">
+    <span style="color:#b5401d;font-family: 'DM Mono', monospace; font-size: 16px;">ARRIVAL<span class="n">01</span> </span>
+        <div class="heading">Check-in from 15:00 
+        </div>
+        <div class="heading2">Sat, 25 April </div>
+        <div class="content">Ring the brass bell by the blue door. If we're at
+        the market, the key is in the terracotta pot by 
+        the olive tree. </div></div>
+    <div style=" background: white;
+    border:1px solid grey; border-radius:10px;  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    <img src="icon-wifi.svg" style="background-color:#6279C5; border-radius:10px; padding:5px; margin:10px; "> 
+    <span style="color:#6279C5;font-family: 'DM Mono', monospace; font-size: 16px; ">WIFI <span class="n">02</span></span>
+        <div class="heading">Le Soleil · Guest</div>
+        <div class="heading2">Password below </div>
+        <div class="kv">
+        <span class="k">NETWORK</span>
+        <span>Le Soleil · Guest</span>
+        </div>
+        <div class="kv">
+        <span class="k">PASSWORD</span>
+        <span class="val">
+        <span id="pw">soleil-2026</span>
+        <button class="copy" id="copy" type="button">COPY</button>
+        </span></div>
+</div>
+    <div style="  background: white;
+    border:1px solid grey;border-radius:10px;  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    <img src="icon-breakfast.svg" style="background-color:#C24B75; border-radius:10px; padding:5px;margin:10px; ">
+    <span style="color:#C24B75;font-family: 'DM Mono', monospace; font-size: 16px; ">BREAKFAST <span class="n">03</span></span>
+    <div class="heading">Served 8 - 10:30</div> 
+    <div class="heading2">On the terrace </div>
+        <div class="content">Fresh figs, Marseille honey, pain au <br>levain, and 
+        espresso. Gluten-free option? Leave a note the
+        night before.</div></div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
