@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <style>
         .split-container {
@@ -10,14 +10,13 @@
             height: 138vh;
         }
         .left-side, .right-side {
-            padding:20px;
+            padding:20px;}  
         .top{
             flex:0.06; 
             border-bottom:1px solid #00000043;
         }
-        }
+
         .left-side {
-            /* vertical line on the left side */
             border-right: 1px solid #00000043; 
             flex: 0.15; padding:10px;
         }
@@ -25,18 +24,92 @@
              padding-top:1px;
              flex:0.85;
         }
+.mobile-bar, .close-btn { display: none; }
+.menu-btn {
+  width: 40px; height: 40px;
+  place-items: center;
+  border: 1px solid #d9ccbc;
+  border-radius: 8px;
+  background: transparent;
+  color: #2a1e16;
+}
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+  .mobile-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; top: 0; z-index: 50;
+    padding: 12px 16px;
+    background: #fff8ea;
+    border-bottom: 1px solid #00000020;
+  }
+  .menu-btn { display: grid; }
+
+  .split-container { display: block; height: auto; }
+  .right-side { padding: 20px 16px 32px; }
+
+  .left-side {
+    display: none;
+    position: fixed; inset: 0; z-index: 100;
+    flex-direction: column;
+    padding: 16px;
+    border-right: none;
+    background: #fff8ea;
+    overflow-y: auto;
+  }
+  .left-side.open { display: flex; }
+  .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  nav { display: flex; flex-direction: column; flex: 1; }
+  nav br { display: none; }
+  nav a {
+    padding: 12px 14px ;
+    margin-bottom: 4px ;
+    border-radius: 10px ;
+  }
+  .weather { margin-top: auto; }     
+  h1 { font-size: 34px; }
+  .head { flex-direction: column; align-items: stretch; gap: 12px; }
+  .actions { width: 100%; }
+  .actions .btn { flex: 1; }              
+  .pages { display: flex; flex-direction: column; width: 100%; height: auto; margin: 28px 0 0; }
+  .welcome, .receipt {
+    position: relative; top: auto; right: auto;
+    width: 100%; min-height: 0; box-sizing: border-box;
+  }
+  .welcome { order: 1; min-height: 380px; transform: rotate(2deg); }
+  .receipt { order: 2; margin-top: -12px; transform: rotate(-2deg); }
+  .pages:hover .welcome { transform: rotate(2deg); }
+  .pages:hover .receipt { transform: rotate(-2deg); }
+  .hint, .sun-illustration { display: none; }
+
+  /* receipt rows */
+  .payments { gap: 12px !important; }
+  .qr { gap: 12px; }
+  .payments span:last-child,
+  .qr span:last-child { text-align: right; justify-self: end; }
+
+  .footers { order: 3; grid-template-columns: 1fr; margin-top: 28px; padding: 0; }
+}
     </style>
 </head>
 <body style="background-color:#ffe5b446;" >
+    <header class="mobile-bar">
+  <img src="logo.svg" width="100" alt="Maison Soleil">
+  <button class="menu-btn" id="openMenu" type="button" aria-label="Open menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</header>
 
     <div class="split-container">
         <div class="left-side">
             <div class="top">
             <img src="logo.svg" width="100" alt="sun" style="padding-bottom:10px; padding-top:5px; "></div>
-            
-
+             <button class="menu-btn close-btn" id="closeMenu" type="button" aria-label="Close menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
                 <nav> 
-                <a href=""#" style="margin-top:16px; background-color:white; border-radius:5px; padding:8px;" >
+                <a href="#" style="margin-top:16px; background-color:white; border-radius:5px; padding:8px;" >
                     <img src="icon-bed.svg" alt="your stay" width="20">Your stay  <span class="notif">1</span></a>
                 <br> <a href="#"><img src="icon-house.svg" alt="the house">The house </a>
                 <br><a href="#"><img src="icon-pin.svg" alt="around town"> Around town</a>
@@ -70,8 +143,8 @@
             <section class="receipt">
                     <div class="torightend">
                             <span>RECEIPT &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;№ MS-2026</span>
-                            <span></span>
-                    <div style="font-size:30px">Your stay
+                            <span></span></div>
+                    <div style="font-size:30px">Your stay</div>
                     <br><div class="dates" style="border-top:1px dotted grey;padding-top:20px;
                     font-size:13px;font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;">
                             <span>CHECK IN </span>
@@ -117,12 +190,12 @@
                 <div style="padding-top:80px;font-size:13px;padding-bottom:10px;">ROOM</div>
                 <div style="font-family: 'Fraunces', Georgia, serif;font-size:30px;">La Garrigue </div>
             </section>
-            <img src="illustration-sun.svg" width="150" style=padding-left:350px;padding-top:250px;">
-            <div style="margin-top:180px; position:relative; z-index:2;margin-left:360px">
+            <img src="illustration-sun.svg" class="sun" width="150" style="padding-left:350px;padding-top:250px;">
+            <div style="margin-top:180px; position:relative; z-index:2;margin-left:360px" class="hovertofan">
     <img src="icon-sparkle.svg">
     HOVER TO FAN
     <img src="icon-sparkle.svg">
-</div>
+            </div>
 <div class="footers" style="padding-left:10px;">
     <div style=" background: white;
     border:1px solid grey;border-radius:10px;box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
